@@ -1,0 +1,47 @@
+
+
+Launching Brillio’s AI-Enablement Program
+
+https://brillio.percipio.com/profile/assignments
+
+
+
+GraphQL is an open source server-side technology which was developed by Facebook to optimize RESTful API calls.
+ It is an execution engine and a data query language.
+ 
+ Okta is a popular identity management platform that provides authentication, authorization, and user management services
+ for applications and APIs. When implementing Okta authentication in a microservices architecture, each microservice typically
+ acts as a resource server that requires authentication and authorization to access its resources.
+ Here's a general overview of how Okta authentication can be implemented in a microservices environment:
+
+1. **Integration with Okta**: The first step is to integrate each microservice with Okta.
+ This usually involves registering each microservice as a client application in the Okta Admin Console.
+ Okta provides client credentials (client ID and client secret) that the microservices will use to authenticate themselves with the Okta platform.
+
+2. **User Authentication**: When a user tries to access a microservice, they are redirected to the Okta authentication server to log in.
+ Okta supports various authentication methods such as username/password, social login (e.g., Google, Facebook),
+ and multi-factor authentication (MFA). Once the user is authenticated, Okta issues an access token to the client application (microservice).
+
+3. **Access Token Validation**: Upon receiving the access token from Okta, the microservice must validate it to ensure its authenticity
+ and integrity. This validation typically involves verifying the signature of the token using Okta's public keys,
+ checking the token's expiration time, and ensuring that the token is intended for the microservice (audience validation).
+
+4. **Authorization**: After successful authentication and token validation, the microservice may need to perform authorization checks
+ to determine whether the authenticated user has the necessary permissions to access the requested resources.
+ Okta provides capabilities for defining access policies, roles, and permissions, which can be enforced by the microservices.
+
+5. **Propagation of Identity**: In a microservices architecture, it's often necessary to propagate the identity of the authenticated
+ user downstream to other microservices that the initial microservice may need to call. This can be achieved by including the user's
+ identity information (e.g., user ID, roles) in the request headers or using a token-based approach like JWT (JSON Web Tokens).
+
+6. **Token Refresh**: Access tokens issued by Okta typically have a limited lifespan (e.g., an hour).
+ To ensure uninterrupted access to resources, the microservice may need to implement token refresh functionality.
+ This involves using the refresh token provided by Okta to obtain a new access token without requiring the user to re-authenticate.
+
+7. **Logging and Auditing**: It's essential to log authentication and authorization events for monitoring, troubleshooting,
+ and compliance purposes. Okta provides auditing features that allow you to track user authentication, access token issuance,
+ and other relevant events.
+
+By following these steps, microservices can leverage Okta's authentication and authorization capabilities to secure their resources
+effectively within a microservices architecture. Additionally, Okta provides SDKs and libraries for various programming languages
+and platforms, simplifying the integration process.

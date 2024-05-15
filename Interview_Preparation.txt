@@ -1,0 +1,208 @@
+
+
+Interview
+
+https://www.geeksforgeeks.org/spring-boot-interceptor/
+
+https://www.baeldung.com/spring-mvc-handlerinterceptor
+
+security in spring boot
+
+
+microService Interview question
+
+https://blog.udemy.com/25-microservices-questions-and-answers-to-study-before-your-next-interview/?utm_source=adwords-pmax&utm_medium=udemyads&utm_campaign=PMax_la.EN_cc.INDIA&utm_content=deal4584&utm_term=_._ag__._kw__._ad__._de_c_._dm__._pl__._ti__._li_9062096_._pd__._&gad_source=1&gclid=Cj0KCQiA2eKtBhDcARIsAEGTG40_mC0g66x6mDfrXODJLljhNjR9zdbLjNGKqsIfYLg3NWpgRXKidIQaAuQDEALw_wcB
+
+
+
+Microservices, also known as Microservices Architecture, is basically an SDLC approach in which large applications are built as a collection of small functional modules
+
+https://www.interviewbit.com/microservices-interview-questions/
+
+
+A broker or server program that uses advanced routing algorithms.  
+RabbitMQ, Nats, Kafka, etc.
+
+Asynchronous communication can be achieved using message queues or message brokers like RabbitMQ or Apache Kafka. 
+
+
+https://www.javaguides.net/2023/07/spring-boot-microservices-interview.html#google_vignette
+
+How does Spring Cloud help with building microservices? 
+Spring Cloud is a framework that provides a set of tools and libraries to simplify the development of microservices 
+using Spring Boot. It offers features like service discovery, client-side load balancing, distributed tracing, circuit breakers,
+and more. Spring Cloud integrates with other popular technologies like 
+Netflix OSS components and provides a consistent and opinionated approach to building microservices. 
+
+
+https://www.javaguides.net/p/spring-boot-microservices-tutorial.html
+https://www.javaguides.net/2022/12/what-is-microservices-in-java.html
+https://www.javaguides.net/2023/01/spring-boot-microservices-architecture.html
+
+Microservices Communication
+Once we build these 3 microservices. Next, we'll see how these microservices communicate with each other.
+Well, there are different ways to make a REST API call from one microservice to another Microservice.
+For example, we can use a RestTemplate or WebClient or Spring cloud-provided open feign library. All right.
+
+
+
+Pattern 
+service registry and discovery patterns.
+API Gateway Pattern
+
+
+---
+microservice communication we use the 
+1. rest template
+2. web client
+3. open fein client
+
+-
+service register discovery patterns
+ spring cloud netflix eureka server = >  avoid hard code port number and host name
+ 
+ 
+ - 
+ spring cloud config server pattern => to config the server
+ 
+ 
+ API gateway pattern => client has to remeber port no and host name, clinet can send request to centreal component 
+ i.e.  api gateway come into picture , based on ruting rule route the request.
+	spring cloud gateway.
+	
+Distrubated tresing pattern
+
+		spring cloud sleuth
+		
+		
+		
+		
+youtube
+
+microservice :
+
+https://www.youtube.com/watch?v=WeY-ZnRofsk
+
+https://www.youtube.com/watch?v=Or81GDcJKzE
+
+https://www.youtube.com/watch?v=J3sh3IeLFh0
+
+Choreography  design pattern : 
+
+https://www.youtube.com/watch?v=YGnpHZcuMOo
+
+
+ACID propery : 
+
+https://www.geeksforgeeks.org/acid-properties-in-dbms/
+
+
+
+
+saga Design pattern :
+
+https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/saga-pattern.html
+
+The saga pattern is a transaction management pattern that helps establish consistency in distributed applications,
+and coordinates transactions between multiple microservices to maintain data consistency.
+
+2.
+https://www.baeldung.com/cs/saga-pattern-microservices
+Database per Service Pattern
+One of the benefits of microservice architecture is that we can choose the technology stack per service.
+
+For instance, we can decide to use a relational database for service A and a NoSQL database for service B.
+
+saga: baeldung 
+https://www.baeldung.com/cs/saga-pattern-microservices		
+
+https://medium.com/cloud-native-daily/microservices-patterns-part-04-saga-pattern-a7f85d8d4aa3
+
+youtube saga pattern by saggu : https://www.youtube.com/watch?v=MnDBRs7L75k 
+
+https://www.youtube.com/watch?v=YGnpHZcuMOo
+
+
+
+circuit breaker : https://www.youtube.com/watch?v=w2IvLnlEyxI
+
+
+
+microservice videos : by Durgesh
+
+https://www.youtube.com/watch?v=QrPvGdpcjXo&list=PL0zysOflRCelb2Y4WOVckFC6B050BzV0D
+
+
+Actuator: spring-boot-starter-actuator
+https://www.geeksforgeeks.org/spring-boot-actuator/
+https://www.baeldung.com/spring-boot-actuators
+
+
+PathVariable : https://www.geeksforgeeks.org/spring-boot-pathvariable-and-requestparam-annotations/
+@PathVariable normally with GET request.
+http://localhost:8080/user/101
+
+@RequestParam normally used with POST request for accessing the query parameter values
+
+http://localhost:8080/user/101?param1=10&param2=20
+
+
+spring boot: 
+annotation
+https://www.geeksforgeeks.org/spring-boot-annotations/
+
+https://www.javaguides.net/2018/11/spring-boot-interview-questions-and-answers.html
+
+
+Reactive programing:  provide a standard for asynchronous stream processing with non-blocking backpressure
+
+https://www.baeldung.com/java-reactive-systems
+
+
+java 8 interview question
+
+https://www.javaguides.net/2018/11/java-8-interview-questions-and-answers.html
+
+
+Feign client :
+
+feign clinet is a declarative HTTP web client  developed by Netflix.
+
+It's a lightweight HTTP client that simplifies the process of making HTTP requests to other microservices within a distributed system.
+Feign aims to make the process of calling HTTP APIs more declarative and easier to manage within a Spring application.
+
+https://www.youtube.com/watch?v=P4Nswz5W0f0&list=PL0zysOflRCelb2Y4WOVckFC6B050BzV0D&index=32
+
+
+Advantages of feign client over RestTemplate
+1. Declarative Approach: Feign allows you to define HTTP clients using interfaces and annotations.
+2. Load Balancing and Service Discovery Integration: Feign integrates seamlessly with service discovery 
+and load balancing tools like Netflix Ribbon and Eureka.
+3.Error Handling and Retry Mechanisms: Feign provides built-in support for error handling and retry mechanisms.
+Overall, Feign Client provides a more modern, declarative, and feature-rich approach to building HTTP 
+clients in Spring Boot applications compared to RestTemplate
+  
+  
+API Gateway:
+
+Aggregation: An API Gateway can aggregate multiple microservices into a single endpoint. Instead of clients making requests to individual services.
+
+Routing: The API Gateway handles routing requests to the appropriate microservice based on the request's URL, headers, or other parameters.
+
+Authentication and Authorization: API Gateways often handle authentication and authorization for incoming requests.
+They can enforce security policies,validate access tokens, and ensure that only authorized users or clients can access certain microservices.  
+
+Load Balancing: API Gateways can distribute incoming requests across multiple instances of a microservice to ensure optimal load distribution and high availability.
+
+Caching: API Gateways can cache responses from microservices to improve performance and reduce latency for frequently accessed data.
+
+Monitoring and Analytics: API Gateways can provide metrics, logging, and analytics for incoming requests and responses.
+
+
+ 
+ 
+ 
+ 
+
+
+
